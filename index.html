@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Load Bearing — System design, one animated step at a time</title>
+  <meta name="description" content="Learn how web systems handle traffic, store data and recover from failure through 40 short, animated system design lessons.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' rx='9' fill='%237c9cff'/%3E%3Cpath d='M8 22.5h16M8 16h10M8 9.5h5' stroke='%23fff' stroke-width='2.6' stroke-linecap='round'/%3E%3Ccircle cx='23' cy='9.5' r='2.6' fill='%23fff'/%3E%3C/svg%3E">
+  <script>
+    (function () {
+      var t = null;
+      try { t = JSON.parse(localStorage.getItem('lb.theme')); } catch (e) {}
+      if (!t && window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) t = 'light';
+      document.documentElement.dataset.theme = t || 'dark';
+    })();
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lbg-top" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--req)"/><stop offset="1" stop-color="var(--violet)"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" fill="url(#lbg-top)"/><path d="M8 22.5h16M8 16h10M8 9.5h5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle class="logo-dot" cx="23" cy="9.5" r="2.6" fill="#fff"/></svg>
+      <span>Load Bearing</span>
+    </a>
+    <nav class="topnav">
+      <a href="#/outline" class="hide-sm">Outline</a>
+      <a href="#/faq" class="hide-sm">FAQ</a>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle light and dark theme">
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="btn sm primary" href="#/learn/request-journey/1">Start learning</a>
+    </nav>
+  </header>
+
+  <div id="app"></div>
+
+  <noscript><p style="padding:40px;text-align:center">Load Bearing needs JavaScript to run its animated lessons.</p></noscript>
+
+  <script src="js/curriculum.js"></script>
+  <script src="js/lessons/foundations.js"></script>
+  <script src="js/lessons/scaling.js"></script>
+  <script src="js/lessons/data.js"></script>
+  <script src="js/lessons/messaging.js"></script>
+  <script src="js/lessons/reliability.js"></script>
+  <script src="js/lessons/architecture.js"></script>
+  <script src="js/lessons/security.js"></script>
+  <script src="js/lessons/delivery.js"></script>
+  <script src="js/lessons/cases.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
